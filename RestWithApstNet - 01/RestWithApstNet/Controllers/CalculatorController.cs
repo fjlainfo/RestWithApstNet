@@ -11,14 +11,74 @@ namespace RestWithApstNet.Controllers
     public class CalculatorController : ControllerBase
     {
 
-        // GET api/values/5/5
-        [HttpGet("{firstNumber}/{secondNumber}")]
+        // GET api/values/sum/5/5
+        [HttpGet("sum/{firstNumber}/{secondNumber}")]
         public IActionResult Sum(string firstNumber, string secondNumber)
         {
             if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
             {
                 var sum = ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber);
                 return Ok(sum.ToString());
+            }
+            return BadRequest("Invalid input");
+        }
+
+        // GET api/values/subtraction/5/5
+        [HttpGet("subtraction/{firstNumber}/{secondNumber}")]
+        public IActionResult Subtraction(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) - ConvertToDecimal(secondNumber);
+                return Ok(sum.ToString());
+            }
+            return BadRequest("Invalid input");
+        }
+
+        // GET api/values/division/5/5
+        [HttpGet("division/{firstNumber}/{secondNumber}")]
+        public IActionResult Division(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) / ConvertToDecimal(secondNumber);
+                return Ok(sum.ToString());
+            }
+            return BadRequest("Invalid input");
+        }
+
+        // GET api/values/multiplication/5/5
+        [HttpGet("multiplication/{firstNumber}/{secondNumber}")]
+        public IActionResult Multiplication(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var sum = ConvertToDecimal(firstNumber) * ConvertToDecimal(secondNumber);
+                return Ok(sum.ToString());
+            }
+            return BadRequest("Invalid input");
+        }
+
+        // GET api/values/mean/5/5
+        [HttpGet("mean/{firstNumber}/{secondNumber}")]
+        public IActionResult Mean(string firstNumber, string secondNumber)
+        {
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                var sum = (ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber)) / 2;
+                return Ok(sum.ToString());
+            }
+            return BadRequest("Invalid input");
+        }
+
+        // GET api/values/square-root/5
+        [HttpGet("square-root/{number}")]
+        public IActionResult SquareRoot(string number)
+        {
+            if (IsNumeric(number))
+            {
+                var squareeRoot = Math.Sqrt((double)ConvertToDecimal(number));
+                return Ok(squareeRoot.ToString());
             }
             return BadRequest("Invalid input");
         }
