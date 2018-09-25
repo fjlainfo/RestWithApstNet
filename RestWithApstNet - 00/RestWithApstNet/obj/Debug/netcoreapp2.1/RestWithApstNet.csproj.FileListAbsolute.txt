@@ -1,0 +1,13 @@
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\bin\Debug\netcoreapp2.1\RestWithApstNet.deps.json
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\bin\Debug\netcoreapp2.1\RestWithApstNet.runtimeconfig.json
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\bin\Debug\netcoreapp2.1\RestWithApstNet.runtimeconfig.dev.json
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\bin\Debug\netcoreapp2.1\RestWithApstNet.dll
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\bin\Debug\netcoreapp2.1\RestWithApstNet.pdb
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.csproj.CoreCompileInputs.cache
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.RazorAssemblyInfo.cache
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.RazorAssemblyInfo.cs
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.AssemblyInfoInputs.cache
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.AssemblyInfo.cs
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.RazorTargetAssemblyInfo.cache
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.dll
+C:\Francisco\Projetos\RestWithApstNet\RestWithApstNet\RestWithApstNet\obj\Debug\netcoreapp2.1\RestWithApstNet.pdb
