@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Francisco\\Projetos\\RestWithApstNet\\RestWithApstNet\\RestWithApstNet\\RestWithApstNet.csproj",
+      "projectUniqueName": "C:\\Francisco\\Projetos\\RestWithApstNet\\RestWithApstNet - 01\\RestWithApstNet\\RestWithApstNet.csproj",
       "projectName": "RestWithApstNet",
-      "projectPath": "C:\\Francisco\\Projetos\\RestWithApstNet\\RestWithApstNet\\RestWithApstNet\\RestWithApstNet.csproj",
+      "projectPath": "C:\\Francisco\\Projetos\\RestWithApstNet\\RestWithApstNet - 01\\RestWithApstNet\\RestWithApstNet.csproj",
       "packagesPath": "C:\\Users\\francisco.alves\\.nuget\\packages\\",
-      "outputPath": "C:\\Francisco\\Projetos\\RestWithApstNet\\RestWithApstNet\\RestWithApstNet\\obj\\",
+      "outputPath": "C:\\Francisco\\Projetos\\RestWithApstNet\\RestWithApstNet - 01\\RestWithApstNet\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
