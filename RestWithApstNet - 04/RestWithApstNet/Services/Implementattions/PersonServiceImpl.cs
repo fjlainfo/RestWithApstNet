@@ -7,7 +7,7 @@ using RestWithApstNet.Model.Context;
 
 namespace RestWithApstNet.Services.Implementattions
 {
-    public class PersonServiceImpl : IPersonService
+    public class PersonServiceImpl : IPersonBusiness
     {
         private MySQLContext _context;
 

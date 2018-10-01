@@ -4,13 +4,15 @@ using RestWithApstNet.Services;
 
 namespace RestWithApstNet.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    //[Route("api/[controller]")]
+    [ApiVersion("1")]
+    [Route("api/[controller]/v{version:apiVersion}")]
+    //[ApiController]
     public class PersonsController : ControllerBase
     {
-        private IPersonService _personService;
+        private IPersonBusiness _personService;
 
-        public PersonsController(IPersonService personService)
+        public PersonsController(IPersonBusiness personService)
         {
             _personService = personService;
         }
