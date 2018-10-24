@@ -68,7 +68,7 @@ namespace RestWithApstNet.Repository.Implementattions
             var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
             try
             {
-                _context.Add(result).CurrentValues.SetValues(person);
+                _context.Entry(result).CurrentValues.SetValues(person);
                 _context.SaveChanges();
             }
             catch (Exception ex)
