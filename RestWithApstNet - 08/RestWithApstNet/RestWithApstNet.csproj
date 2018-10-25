@@ -24,5 +24,7 @@
 		</ReferencePath>
 	</ItemGroup>	
   </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties Evolve_1json__JSONSchema="http://json.schemastore.org/babelrc" /></VisualStudio></ProjectExtensions>
   
 </Project>
