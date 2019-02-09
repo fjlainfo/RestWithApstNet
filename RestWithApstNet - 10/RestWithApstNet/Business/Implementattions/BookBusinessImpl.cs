@@ -1,48 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Collections.Generic;
 using RestWithApstNet.Model;
-using RestWithApstNet.Model.Context;
-using RestWithApstNet.Repository;
+using RestWithApstNet.Repository.Generic;
 
 namespace RestWithApstNet.Business.Implementattions
 {
-    public class BookBusinessImpl //: IBookBusiness
+    public class BookBusinessImpl : IBookBusiness
     {
-        //private IPersonRepository _repository;
+        private IRepository<Book> _repository;
 
-        //public BookBusinessImpl(IPersonRepository repository)
-        //{
-        //    _repository = repository;
-        //}
+        public BookBusinessImpl(IRepository<Book> repository)
+        {
+            _repository = repository;
+        }
 
-        //public Book Create(Book book)
-        //{
-        //    return _repository.Create(book);
-        //}
+        public Book Create(Book book)
+        {
+            return _repository.Create(book);
+        }
 
-        //public void Delete(long id)
-        //{
-        //    _repository.Delete(id);
-        //}
+        public void Delete(long id)
+        {
+            _repository.Delete(id);
+        }
 
-        //public List<Book> FindAll()
-        //{
-        //    return _repository.FindAll();
-        //}
+        public List<Book> FindAll()
+        {
+            return _repository.FindAll();
+        }
 
-        //public Book FindById(long id)
-        //{
-        //    return _repository.FindById(id);
-        //}
+        public Book FindById(long id)
+        {
+            return _repository.FindById(id);
+        }
 
-        //public Book Update(Book book)
-        //{
-        //    return _repository.Update(book);
-        //}
-
-        
+        public Book Update(Book book)
+        {
+            return _repository.Update(book);
+        }
     }
 }
 

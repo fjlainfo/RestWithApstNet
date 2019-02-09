@@ -1,6 +1,6 @@
 {
   "Evolve.Drive": "MySql.Data",
-  "Evolve.ConnectionString": "Server=localhost;DataBase=rest_with_asp_net;Uid=root;Pwd=root;SslMode=none",
+  "Evolve.ConnectionString": "Server=localhost;Port=3306;DataBase=rest_with_asp_net;Uid=root;Pwd=root;SslMode=none",
   "Evolve.Locatios": "db",
   "Evolve.Command": "migrate",
   "Evolve.Placeholder.table_4": "table_4"

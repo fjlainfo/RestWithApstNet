@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+﻿using System.Collections.Generic;
 using RestWithApstNet.Model;
-using RestWithApstNet.Model.Context;
-using RestWithApstNet.Repository;
+using RestWithApstNet.Repository.Generic;
 
 namespace RestWithApstNet.Business.Implementattions
 {
     public class PersonBusinessImpl : IPersonBusiness
     {
-        private IPersonRepository _repository;
+        private IRepository<Person> _repository;
 
-        public PersonBusinessImpl(IPersonRepository repository)
+        public PersonBusinessImpl(IRepository<Person> repository)
         {
             _repository = repository;
         }

@@ -12,6 +12,7 @@ using RestWithApstNet.Business.Implementattions;
 using RestWithApstNet.Repository.Implementattions;
 using RestWithApstNet.Repository;
 using System.Collections.Generic;
+using RestWithApstNet.Repository.Generic;
 
 namespace RestWithApstNet
 {
@@ -40,7 +41,7 @@ namespace RestWithApstNet
                 {
                     var evolveConnection = new MySql.Data.MySqlClient.MySqlConnection(connectionString);
 
-                    var evolve = new Evolve.Evolve("evolve.json", evolveConnection, msg => _logger.LogInformation(msg))
+                    var evolve = new Evolve.Evolve("Evolve.json", evolveConnection, msg => _logger.LogInformation(msg))
                     {
                         Locations = new List<string> { "db/migrations" },
                         IsEraseDisabled = true,
@@ -62,11 +63,14 @@ namespace RestWithApstNet
             
             //Dependencia
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
+            services.AddScoped<IBookBusiness, BookBusinessImpl>();
             services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
+
+            services.AddScoped(typeof(IRepository<>), typeof(GenercIRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -77,6 +81,9 @@ namespace RestWithApstNet
                 app.UseHsts();
             }
 
+            loggerFactory.AddConsole(_configuration.GetSection("Logging"));
+            loggerFactory.AddDebug();
+            
             app.UseHttpsRedirection();
             app.UseMvc();
         }
