@@ -2,6 +2,11 @@
 using RestWithApstNet.Model;
 using RestWithApstNet.Business;
 using RestWithApstNet.Data.VO;
+using System.Collections.Generic;
+using System;
+using Swashbuckle.AspNetCore.Annotations;
+using Microsoft.AspNetCore.Authorization;
+using Tapioca.HATEOAS;
 
 namespace RestWithApstNet.Controllers
 {
@@ -20,6 +25,13 @@ namespace RestWithApstNet.Controllers
 
         // GET api/values
         [HttpGet]
+        [SwaggerResponse((200), Type = typeof(List<BookVO>))]
+        [SwaggerResponse(200)]
+        [SwaggerResponse(204)]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
            return Ok(_bookBusiness.FindAll());
@@ -28,6 +40,13 @@ namespace RestWithApstNet.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
+        [SwaggerResponse((200), Type = typeof(BookVO))]
+        [SwaggerResponse(200)]
+        [SwaggerResponse(204)]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(int id)
         {
             var book = _bookBusiness.FindById(id);
@@ -37,6 +56,11 @@ namespace RestWithApstNet.Controllers
 
         // POST api/values
         [HttpPost]
+        [SwaggerResponse((201), Type = typeof(BookVO))]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Post([FromBody] BookVO book)
         {
             if (book == null) return BadRequest();
@@ -46,6 +70,11 @@ namespace RestWithApstNet.Controllers
 
         // PUT api/values/5
         [HttpPut]
+        [SwaggerResponse((202), Type = typeof(BookVO))]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Put([FromBody] BookVO book)
         {
             if (book == null) return BadRequest();
@@ -57,6 +86,11 @@ namespace RestWithApstNet.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
+        [SwaggerResponse(204)]
+        [SwaggerResponse(400)]
+        [SwaggerResponse(401)]
+        [Authorize("Bearer")]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Delete(int id)
         {
             _bookBusiness.Delete(id);

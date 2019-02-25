@@ -1,0 +1,3 @@
+--INSERT INTO `users` (`Login`, `AccessKey`) VALUES
+--	('Leandro', 'Admin123'),
+--	('Paulo', 'Admin123');
